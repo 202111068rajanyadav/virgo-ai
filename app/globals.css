@@ -2,26 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --bard-color-brand-text-gradient-stop-1:#4485f2;
+    --bard-color-brand-text-gradient-stop-2:#9b72c9;
+    --bard-color-brand-text-gradient-stop-3:#d8646f;
+
+    --gem-sys-color--surface: #1d1e1f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+.gradient-text {
+   background: linear-gradient(74deg,
+   var(--bard-color-brand-text-gradient-stop-1) 0,
+   var(--bard-color-brand-text-gradient-stop-2) 9%,
+   var(--bard-color-brand-text-gradient-stop-3) 20%,
+   var(--bard-color-brand-text-gradient-stop-3) 24%,
+   var(--bard-color-brand-text-gradient-stop-2) 35%,
+   var(--bard-color-brand-text-gradient-stop-1) 44%,
+   var(--bard-color-brand-text-gradient-stop-2) 50%,
+   var(--bard-color-brand-text-gradient-stop-3) 56%,
+   var(--gem-sys-color--surface) 75%,
+   var(--gem-sys-color--surface) 100%);
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+   background-size: 400% 100%;
+   color: transparent;
+    background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

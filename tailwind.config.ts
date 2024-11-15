@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        "sidebar-bg" : "#27292b",
+        "chat-bg" : "#1d1e1f",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
